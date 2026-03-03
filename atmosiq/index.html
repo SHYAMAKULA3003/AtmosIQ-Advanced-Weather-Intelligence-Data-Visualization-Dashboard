@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AtmosIQ</title>
+
+  <!-- jsPDF -->
+<!--   <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+  <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="app">
+
+  <header>
+    <h1>AtmosIQ</h1>
+    <p>Clean weather intelligence</p>
+  </header>
+
+  <!-- SEARCH -->
+  <div class="search">
+    <input id="cityInput" placeholder="Enter city name">
+    <button onclick="getWeather()">Analyze</button>
+  </div>
+
+  <!-- WEATHER CARDS -->
+  <div class="cards">
+
+    <div class="card temp-card">
+      <h2 id="city">—</h2>
+      <div id="temp">--°C</div>
+      <p id="condition">—</p>
+      <small id="feels">Feels like: --°C</small>
+    </div>
+
+    <div class="card">
+      <h3>Humidity</h3>
+      <span id="humidity">--%</span>
+      <small id="pressure">Pressure: -- hPa</small>
+    </div>
+
+    <div class="card">
+      <h3>Wind</h3>
+      <span id="wind">-- km/h</span>
+      <small id="windDir">Direction: --</small>
+    </div>
+
+  </div>
+
+  <!-- ANALYSIS -->
+  <div class="analysis">
+    <h3>Weather Analysis</h3>
+    <p id="analysisText">Search a city to begin.</p>
+  </div>
+
+  <!-- PREDICTION -->
+  <div class="prediction">
+    <h3>Prediction</h3>
+    <p id="predictionText">—</p>
+  </div>
+
+  <!-- DOWNLOAD -->
+  <button class="download" onclick="downloadReport()">
+    ⬇ Download Weather Report (PDF)
+  </button>
+  <p id="reportStatus"></p>
+
+  <!-- MAP -->
+  <div class="map-box">
+    <h3>City Map</h3>
+    <iframe id="mapFrame"></iframe>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
